@@ -1,0 +1,16 @@
+I have used NoSql DB because
+
+
+
+1 .The size of the URL list could grow infinitely, how might you scale this beyond the memory capacity of the system?
+    Here due to some work load which i had this week ,i have used mongoDB.But for this kind of use case we can go with elastic search
+    In elastic search we can use cluster and add n number of nodes where we can grow the memory according to the use.
+
+2.The number of requests may exceed the capacity of this system, how might you solve that?
+    We can have load balancer,we can have a configuration where if the requests exceed "n" number then we can redirect to the other machine.
+    or using the load balaner we can split requests to two machines
+
+
+3. What are some strategies you might use to update the service with new URLs? Updates may be as much as 5 thousand URLs a day with updates arriving ev0 minutes.
+    We can use threading concept to load the urls to the service parallely.
+
